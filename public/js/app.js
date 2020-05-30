@@ -10,7 +10,7 @@ const messageSix = document.querySelector('#message-6')
 
 form.addEventListener('submit',(event)=>{
     event.preventDefault()
-    fetch('http://localhost:3000/weather?address='+encodeURIComponent(search.value)).then((response)=>{
+    fetch('/weather?address='+encodeURIComponent(search.value)).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             messageOne.textContent = 'Error'
